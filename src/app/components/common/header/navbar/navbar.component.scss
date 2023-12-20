@@ -29,7 +29,11 @@
             line-height: 1;
             display: none;
             padding: 0;
-            width: 200px;
+            width: 100px;
+
+            img {
+                height: 85px;
+            }
 
             h1 {
                 line-height: 1;
@@ -682,7 +686,7 @@
                         }
                         &:hover,
                         &.active {
-                            color: var(--hospital-main-color);
+                            color: var(--main-color);
                         }
                     }
                     .dropdown-toggle {
@@ -693,7 +697,7 @@
                     &:hover,
                     &.active {
                         .nav-link {
-                            color: var(--hospital-main-color);
+                            color: var(--main-color);
                         }
                     }
                     .dropdown-menu {

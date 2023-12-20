@@ -10,7 +10,10 @@
             [class.active]="classApplied"
         >
             <a class="navbar-brand" routerLink="/" (click)="toggleClass()">
-                <img src="../../../../../assets/images/logo.jpg" alt="logo" />
+                <img
+                    src="../../../../../assets/images/favicon.png"
+                    alt="logo"
+                />
             </a>
 
             <button
@@ -73,6 +76,16 @@
                             routerLink="/insurance"
                         >
                             {{ lang === "ltr" ? "Insurance" : " التأمين " }}
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a
+                            href="javascript:void(0)"
+                            class="nav-link"
+                            routerLink="/about-us-3"
+                        >
+                            {{ lang === "ltr" ? "About Us" : " من نحن " }}
                         </a>
                     </li>
 
@@ -168,6 +181,16 @@
                             routerLink="/insurance"
                         >
                             {{ lang === "ltr" ? "Insurance" : " التأمين " }}
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a
+                            href="javascript:void(0)"
+                            class="nav-link"
+                            routerLink="/about-us-3"
+                        >
+                            {{ lang === "ltr" ? "About Us" : " من نحن " }}
                         </a>
                     </li>
 

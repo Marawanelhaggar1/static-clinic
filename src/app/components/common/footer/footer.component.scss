@@ -1,5 +1,5 @@
 .footer-area {
-    background-color: var(--main-color2);
+    background-color: var(--main-color);
 }
 .single-footer-widget {
     margin-bottom: 25px;
@@ -70,7 +70,7 @@
                 position: relative;
 
                 &:hover {
-                    color: var(--main-color);
+                    // color: var(--main-color);
 
                     &::before {
                         width: 100%;
@@ -84,7 +84,7 @@
                     content: "";
                     position: absolute;
                     transition: var(--transition);
-                    background-color: var(--main-color);
+                    background-color: var(--white-color);
                 }
             }
             &:last-child {
@@ -137,7 +137,7 @@
                         color: var(--white-color);
 
                         &:hover {
-                            color: var(--main-color);
+                            // color: var(--main-color);
                         }
                     }
                 }
@@ -152,7 +152,7 @@
                         color: var(--white-color);
 
                         &:hover {
-                            color: var(--main-color);
+                            // color: var(--main-color);
                         }
                     }
                 }
@@ -184,7 +184,7 @@
                 top: 50%;
                 font-size: 38px;
                 position: absolute;
-                color: var(--main-color);
+                color: var(--white-color);
                 transform: translateY(-50%);
             }
             span {
@@ -199,7 +199,7 @@
                     color: var(--white-color);
 
                     &:hover {
-                        color: var(--main-color);
+                        // color: var(--main-color);
                     }
                 }
             }
@@ -207,10 +207,10 @@
     }
 }
 .copyright-area {
-    background-color: var(--main-color2);
+    background-color: var(--main-color);
 
     .copyright-area-content {
-        border-top: 1px solid #2e405b;
+        border-top: 1px solid white;
         text-align: center;
         padding: {
             top: 30px;
@@ -305,7 +305,7 @@
                 position: relative;
 
                 &:hover {
-                    color: var(--main-color);
+                    // color: var(--main-color);
 
                     &::before {
                         width: 100%;
@@ -319,7 +319,7 @@
                     content: "";
                     position: absolute;
                     transition: var(--transition);
-                    background-color: var(--main-color);
+                    background-color: var(--white-color);
                 }
             }
             &:last-child {
@@ -372,7 +372,8 @@
                         color: var(--white-color);
 
                         &:hover {
-                            color: var(--main-color);
+                            // color: var(--main-color2);
+                            color: white;
                         }
                     }
                 }
@@ -387,7 +388,7 @@
                         color: var(--white-color);
 
                         &:hover {
-                            color: var(--main-color);
+                            // color: var(--main-color);
                         }
                     }
                 }
@@ -419,7 +420,7 @@
                 top: 50%;
                 font-size: 38px;
                 position: absolute;
-                color: var(--main-color);
+                color: var(--white-color);
                 transform: translateY(-50%);
             }
             span {
@@ -434,7 +435,7 @@
                     color: var(--white-color);
 
                     &:hover {
-                        color: var(--main-color);
+                        // color: var(--main-color);
                     }
                 }
             }
@@ -445,7 +446,7 @@
 /* Max width 767px */
 @media only screen and (max-width: 767px) {
     .footer-area {
-        background-color: #091e3e;
+        background-color: var(--main-color);
     }
     .single-footer-widget {
         h2 {
