@@ -1,0 +1,348 @@
+<div class="page-banner-area ptb-100 four" [dir]="lang">
+    <div class="container">
+        <div
+            [ngClass]="
+                lang === 'ltr'
+                    ? 'page-banner-content'
+                    : 'page-banner-content-rtl text-end'
+            "
+        >
+            <h2>
+                {{
+                    lang === "ltr"
+                        ? "Best Doctors in Egypt"
+                        : "أحسن دكاتره فى مصر"
+                }}
+            </h2>
+            <ul class="pages-list">
+                <li>
+                    <a href="index.html">{{
+                        lang === "ltr" ? "Home" : "الرئيسيه"
+                    }}</a>
+                </li>
+                <li>
+                    {{ lang === "ltr" ? "Find a Doctor" : "ابحث عن دكتور" }}
+                </li>
+            </ul>
+            <div class="mt-4 appointment">
+                <app-appointment-search></app-appointment-search>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="booking" [dir]="lang">
+    <div class="container">
+        <div class="header">
+            <div class="header-contnet">
+                <h4>
+                    {{ lang === "ltr" ? "All Specialities" : "كل التخصصات" }}
+                </h4>
+                <span> {{ lang === "ltr" ? "2 Doctors" : "٢ طبيب" }}</span>
+            </div>
+            <div class="sort">
+                <label>{{ lang === "ltr" ? "Sort :" : "رتب :" }} </label>
+                <select aria-placeholder="Sort Doctor">
+                    <option value="best match" selected>
+                        {{ lang === "ltr" ? "Best Match" : "الأكثر تطابقا" }}
+                    </option>
+                    <option value="top rated">
+                        {{ lang === "ltr" ? "Top Rated" : "الأعلى تقيما" }}
+                    </option>
+                </select>
+            </div>
+        </div>
+        <div class="booking-card">
+            <div class="image">
+                <img
+                    src="https://angular.hibotheme.com/inba/assets/images/doctor/doctor-1.jpg"
+                    alt=""
+                />
+            </div>
+            <div class="details">
+                <div class="title">
+                    <div class="name">
+                        <span>{{ lang === "ltr" ? "Doctor" : "دكتورة" }} </span>
+                        <h3>
+                            {{
+                                lang === "ltr" ? "Amira Elsaid" : "أميرة السيد"
+                            }}
+                        </h3>
+                    </div>
+                    <p class="job-title">
+                        {{
+                            lang === "ltr"
+                                ? "Gynecologist Specialized in IVF, Gynaecology"
+                                : "استشارى أمراض النساء والتوليد وتأخر الانجاب"
+                        }}
+                    </p>
+                </div>
+
+                <div class="ratings">
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star-half"></i>
+
+                    <p>
+                        {{
+                            lang === "ltr"
+                                ? "overall ratings from 1232"
+                                : "التقييم العام من ١٢٣٢ شخص"
+                        }}
+                    </p>
+                </div>
+
+                <div class="doctor-info">
+                    <div class="info">
+                        <i class="bx bx-location-plus"></i>
+                        <p>
+                            {{
+                                lang === "ltr"
+                                    ? "Gynecologist Specialized in IVF"
+                                    : "دكتور نساء وتوليد متخصص في أطفال الأنابيب وأمراض "
+                            }}
+                        </p>
+                    </div>
+                    <div class="info">
+                        <i class="bx bx-money"></i>
+                        <p>
+                            {{
+                                lang === "ltr"
+                                    ? "Fee : 300 EGB"
+                                    : "السعر : ٣٠٠ جم"
+                            }}
+                        </p>
+                    </div>
+                    <div class="info">
+                        <i class="bx bx-stopwatch"></i>
+                        <p>
+                            {{
+                                lang === "ltr"
+                                    ? "Wating Period is 20 Minutes"
+                                    : "مدة الانتظار : ٢٠ دقيقة"
+                            }}
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="date">
+                <owl-carousel-o [options]="customOptions" dir="ltr">
+                    <ng-template
+                        *ngFor="let item of daysOfTheWeek; index as i"
+                        carouselSlide
+                    >
+                        <div class="dates-card" routerLink="/book-appointment">
+                            <p class="date-banner">{{ item }}</p>
+                            <p class="dates">
+                                {{
+                                    lang === "ltr"
+                                        ? "From 8pm To 12pm"
+                                        : "من الساعه ١٠ ص الى الساعه ٥ م"
+                                }}
+                            </p>
+                            <button type="button">
+                                {{ lang === "ltr" ? "Book" : "أحجز" }}
+                            </button>
+                        </div>
+                    </ng-template>
+                </owl-carousel-o>
+            </div>
+        </div>
+        <div class="booking-card">
+            <div class="image">
+                <img
+                    src="https://angular.hibotheme.com/inba/assets/images/doctor/doctor-2.jpg"
+                    alt=""
+                />
+            </div>
+            <div class="details">
+                <div class="title">
+                    <div class="name">
+                        <span>{{ lang === "ltr" ? "Doctor" : "دكتور" }} </span>
+                        <h3>
+                            {{ lang === "ltr" ? "Tamer Yehia" : "تامر يحي" }}
+                        </h3>
+                    </div>
+                    <p class="job-title">
+                        {{
+                            lang === "ltr"
+                                ? "Ph.D. and Consultant Oral and Maxillofacial Surgery"
+                                : "دكتوراه. واستشاري جراحة الفم والوجه والفكين"
+                        }}
+                    </p>
+                </div>
+
+                <div class="ratings">
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star-half"></i>
+
+                    <p>
+                        {{
+                            lang === "ltr"
+                                ? "overall ratings from 1232"
+                                : "التقييم العام من ١٢٣٢ شخص"
+                        }}
+                    </p>
+                </div>
+
+                <div class="doctor-info">
+                    <div class="info">
+                        <i class="bx bx-location-plus"></i>
+                        <p>
+                            {{
+                                lang === "ltr"
+                                    ? " Orthopedist Specialized in Hand and Upper Limb Surgery"
+                                    : "دكتور عظام متخصص في جراحة اليد والطرف العلوي"
+                            }}
+                        </p>
+                    </div>
+                    <div class="info">
+                        <i class="bx bx-money"></i>
+                        <p>
+                            {{
+                                lang === "ltr"
+                                    ? "Fee : 300 EGB"
+                                    : "السعر : ٣٠٠ جم"
+                            }}
+                        </p>
+                    </div>
+                    <div class="info">
+                        <i class="bx bx-stopwatch"></i>
+                        <p>
+                            {{
+                                lang === "ltr"
+                                    ? "Wating Period is 20 Minutes"
+                                    : "مدة الانتظار : ٢٠ دقيقة"
+                            }}
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="date">
+                <owl-carousel-o [options]="customOptions" dir="ltr">
+                    <ng-template
+                        *ngFor="let item of daysOfTheWeek; index as i"
+                        carouselSlide
+                    >
+                        <div class="dates-card" routerLink="/book-appointment">
+                            <p class="date-banner">{{ item }}</p>
+                            <p class="dates">
+                                {{
+                                    lang === "ltr"
+                                        ? "From 8pm To 12pm"
+                                        : "من الساعه ١٠ ص الى الساعه ٥ م"
+                                }}
+                            </p>
+                            <button type="button">
+                                {{ lang === "ltr" ? "Book" : "أحجز" }}
+                            </button>
+                        </div>
+                    </ng-template>
+                </owl-carousel-o>
+            </div>
+        </div>
+        <div class="booking-card">
+            <div class="image">
+                <img
+                    src="https://angular.hibotheme.com/inba/assets/images/doctor/doctor-5.jpg"
+                    alt=""
+                />
+            </div>
+            <div class="details">
+                <div class="title">
+                    <div class="name">
+                        <span>{{ lang === "ltr" ? "Doctor" : "دكتور" }} </span>
+                        <h3>
+                            {{
+                                lang === "ltr"
+                                    ? "Ayman El Azony"
+                                    : "أيمن الزوني"
+                            }}
+                        </h3>
+                    </div>
+                    <p class="job-title">
+                        {{
+                            lang === "ltr"
+                                ? "Professor of neurology and psychological"
+                                : "استاذ امراض المخ و الاعصاب والطب النفسي بكلية الطب"
+                        }}
+                    </p>
+                </div>
+
+                <div class="ratings">
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+
+                    <p>
+                        {{
+                            lang === "ltr"
+                                ? "overall ratings from 1232"
+                                : "التقييم العام من ١٢٣٢ شخص"
+                        }}
+                    </p>
+                </div>
+
+                <div class="doctor-info">
+                    <div class="info">
+                        <i class="bx bx-location-plus"></i>
+                        <p>
+                            {{
+                                lang === "ltr"
+                                    ? " Orthopedist Specialized in Hand and Upper Limb Surgery"
+                                    : "دكتور عظام متخصص في جراحة اليد والطرف العلوي"
+                            }}
+                        </p>
+                    </div>
+                    <div class="info">
+                        <i class="bx bx-money"></i>
+                        <p>
+                            {{
+                                lang === "ltr"
+                                    ? "Fee : 300 EGB"
+                                    : "السعر : ٣٠٠ جم"
+                            }}
+                        </p>
+                    </div>
+                    <div class="info">
+                        <i class="bx bx-stopwatch"></i>
+                        <p>
+                            {{
+                                lang === "ltr"
+                                    ? "Wating Period is 20 Minutes"
+                                    : "مدة الانتظار : ٢٠ دقيقة"
+                            }}
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="date">
+                <owl-carousel-o [options]="customOptions" dir="ltr">
+                    <ng-template
+                        *ngFor="let item of daysOfTheWeek; index as i"
+                        carouselSlide
+                    >
+                        <div class="dates-card" routerLink="/book-appointment">
+                            <p class="date-banner">{{ item }}</p>
+                            <p class="dates">
+                                {{
+                                    lang === "ltr"
+                                        ? "From 8pm To 12pm"
+                                        : "من الساعه ١٠ ص الى الساعه ٥ م"
+                                }}
+                            </p>
+                            <button type="button">
+                                {{ lang === "ltr" ? "Book" : "أحجز" }}
+                            </button>
+                        </div>
+                    </ng-template>
+                </owl-carousel-o>
+            </div>
+        </div>
+    </div>
+</div>

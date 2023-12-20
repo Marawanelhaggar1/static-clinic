@@ -1,0 +1,141 @@
+<div [dir]="lang" class="container">
+    <div class="profile">
+        <div class="image">
+            <img
+                src="https://angular.hibotheme.com/inba/assets/images/doctor/doctor-1.jpg"
+                alt=""
+            />
+        </div>
+        <div class="details">
+            <h3>
+                {{ lang === "ltr" ? "Dr. Amira Elsaid" : "د. أميرة السيد" }}
+            </h3>
+            <p>
+                {{
+                    lang === "ltr"
+                        ? " Consultant Obstetrics and Gynecology Clinics"
+                        : "عيادات إستشارية أمراض النساء والتوليد"
+                }}
+            </p>
+            <div class="doctor-info">
+                <div class="info">
+                    <i class="bx bx-location-plus"></i>
+                    <p>
+                        {{
+                            lang === "ltr"
+                                ? "Gynecologist Specialized in IVF"
+                                : "دكتور نساء وتوليد متخصص في أطفال الأنابيب وأمراض "
+                        }}
+                    </p>
+                </div>
+                <div class="info">
+                    <i class="bx bx-money"></i>
+                    <p>
+                        {{
+                            lang === "ltr" ? "Fee : 300 EGB" : "السعر : ٣٠٠ جم"
+                        }}
+                    </p>
+                </div>
+                <div class="info">
+                    <i class="bx bx-stopwatch"></i>
+                    <p>
+                        {{
+                            lang === "ltr"
+                                ? "Wating Period is 20 Minutes"
+                                : "مدة الانتظار : ٢٠ دقيقة"
+                        }}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="form">
+        <h3>{{ lang === "ltr" ? "Appointment Form" : " أحجز الأن " }}</h3>
+        <div>
+            <form [formGroup]="appointmentForm" (ngSubmit)="onSubmit()">
+                <div class="form-group">
+                    <input
+                        type="text"
+                        class="form-control"
+                        formControlName="first_name"
+                        [placeholder]="
+                            lang === 'ltr' ? 'First Name' : 'اللأسم اللأول'
+                        "
+                    />
+                </div>
+                <div class="form-group">
+                    <input
+                        type="text"
+                        formControlName="last_name"
+                        class="form-control"
+                        [placeholder]="
+                            lang === 'ltr' ? 'Last Name' : 'اسم العائلة'
+                        "
+                    />
+                </div>
+                <div class="form-group">
+                    <input
+                        type="text"
+                        formControlName="email"
+                        class="form-control"
+                        [placeholder]="
+                            lang === 'ltr'
+                                ? 'Email address'
+                                : 'بريدك اللألكترونى'
+                        "
+                    />
+                </div>
+                <div class="form-group">
+                    <input
+                        type="text"
+                        formControlName="mobile"
+                        class="form-control"
+                        [placeholder]="
+                            lang === 'ltr' ? 'Mobile Number' : 'رقم هاتفك'
+                        "
+                    />
+                </div>
+                <div class="form-group text-start">
+                    <label class="payment-label">{{
+                        lang === "ltr" ? "PayMent Method" : "طرق الدفع"
+                    }}</label>
+                    <div class="form-check">
+                        <input
+                            class="form-check-input"
+                            type="radio"
+                            name="flexRadioDefault"
+                            id="flexRadioDefault1"
+                        />
+                        <label class="form-check-label" for="flexRadioDefault1">
+                            {{ lang === "ltr" ? "Insured" : "التأمين" }}
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input
+                            class="form-check-input"
+                            type="radio"
+                            name="flexRadioDefault"
+                            id="flexRadioDefault2"
+                            checked
+                        />
+                        <label class="form-check-label" for="flexRadioDefault2">
+                            {{ lang === "ltr" ? "Cash" : " نقدي" }}
+                        </label>
+                    </div>
+                </div>
+                <div dir="ltr" class="recaptcha">
+                    <re-captcha
+                        (resolved)="resolved($event)"
+                        (errored)="onError($event)"
+                        errorMode="handled"
+                        render="explicit"
+                        [siteKey]="siteKey"
+                    ></re-captcha>
+                </div>
+                <button type="submit" class="default-btn">
+                    {{ lang === "ltr" ? "Book an Appointment" : " أحجز الأن " }}
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
