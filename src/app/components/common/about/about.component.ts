@@ -9,14 +9,38 @@ import { Router } from '@angular/router';
 export class AboutComponent implements OnInit {
     lang?: string;
     services = [
-        { en: 'Radiology Center', ar: 'مركز الأشعة' },
-        { en: 'Operations Department', ar: ' قسم العمليات ' },
-        { en: 'Emergency and Trauma Center', ar: ' مركز الطوارئ والإصابات ' },
-        { en: 'Intensive Care Unit', ar: ' الرعاية المركزة ' },
-        { en: 'Outpatient clinics', ar: 'العيادات الخارجية' },
-        { en: 'Accommodation', ar: 'الإقامات' },
-        { en: 'Medical analysis laboratory', ar: 'معمل التحاليل الطبية' },
-        { en: 'Cardiology Center', ar: ' مراكز القلب' },
+        {
+            en: 'Radiology Center',
+            ar: 'مركز الأشعة',
+        },
+        {
+            en: 'Operations Department',
+            ar: ' قسم العمليات ',
+        },
+        {
+            en: 'Eye Emergency Department',
+            ar: ' قسم طوارئ العيون',
+        },
+        {
+            en: 'Intensive Care Unit',
+            ar: ' الرعاية المركزة ',
+        },
+        {
+            en: 'Outpatient clinics',
+            ar: 'العيادات الخارجية',
+        },
+        {
+            en: 'Accommodation',
+            ar: 'الإقامات',
+        },
+        {
+            en: 'Diagnostic Testing Center',
+            ar: 'مركز الاختبارات التشخيصية',
+        },
+        {
+            en: ' Cataract and Primary Eye Care Service',
+            ar: 'خدمة إعتام عدسة العين والرعاية الأولية للعيون',
+        },
     ];
     constructor() {}
 
