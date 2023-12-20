@@ -28,8 +28,8 @@ export class FeaturesComponent implements OnInit {
         },
         {
             icon: 'flaticon-082-siren',
-            en: 'Emergency and Trauma Center',
-            ar: ' مركز الطوارئ والإصابات ',
+            en: 'Eye Emergency Department',
+            ar: ' قسم طوارئ العيون',
             descriptionEn:
                 'Emergency service is available 24/7 to provide the highest medical care',
             descriptionAr:
@@ -64,17 +64,17 @@ export class FeaturesComponent implements OnInit {
         },
         {
             icon: 'flaticon-065-microscope',
-            en: 'Medical analysis laboratory',
-            ar: 'معمل التحاليل الطبية',
+            en: 'Diagnostic Testing Center',
+            ar: 'مركز الاختبارات التشخيصية',
             descriptionEn:
                 'lab services 24/7 to give fast and accurate results',
             descriptionAr:
                 'معمل مجهز للعمل علي مدار 24 ساعة لإعطاء أسرع وأدق النتائج',
         },
         {
-            icon: 'flaticon-110-heart-4',
-            en: 'Cardiology Center',
-            ar: 'مراكز القلب',
+            icon: 'flaticon-179-invisible',
+            en: ' Cataract and Primary Eye Care Service',
+            ar: 'خدمة إعتام عدسة العين والرعاية الأولية للعيون',
             descriptionEn:
                 'lab services 24/7 to give fast and accurate results',
             descriptionAr:

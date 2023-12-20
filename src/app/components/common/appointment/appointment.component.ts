@@ -36,10 +36,10 @@ export class AppointmentComponent implements OnInit {
             ];
 
             this.specialties = [
-                ' المسالك البوليه',
-                ' التخدير أمراض النساء و الولادة ',
-                ' جراحة القلب و القسطرة طب القلب العامة  ',
-                ' جراحة ',
+                ' الالتهاب العنبي ',
+                ' المياه الزرقاء',
+                ' برنامج علاج أورام العيون ',
+                ' طب عيون الأطفال والحوَل ',
             ];
         } else {
             this.doctors = [
@@ -49,10 +49,10 @@ export class AppointmentComponent implements OnInit {
                 'Maged El Wakeel',
             ];
             this.specialties = [
-                'Urology',
-                'Anesthesia, obstetrics and gynecology',
-                'cardiology',
-                'Surgery',
+                'Uveitis',
+                'The blue water',
+                'Eye tumor treatment program',
+                'Pediatric ophthalmology and strabismus',
             ];
         }
     }
